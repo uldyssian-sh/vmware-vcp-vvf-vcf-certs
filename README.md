@@ -1,4 +1,4 @@
-# VMware Cloud Foundation (VCF) Certification Paths – Official Resource Index (2025)
+# VMware Cloud Foundation (VCF) Certification Paths
 
 This repository serves as a clean, curated **index of VMware Cloud Foundation (VCF) certification paths and related resources** hosted on an official VMware Box folder.
 
