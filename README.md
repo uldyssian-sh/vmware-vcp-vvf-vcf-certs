@@ -6,7 +6,7 @@ This repository serves as a clean, curated **index of VMware Cloud Foundation (V
 
 ##  Official Resource Link
 
-- **VMware Cloud Foundation Certification Paths – Box Folder**  
+- **VMware Cloud Foundation Certification Paths – Box Folder**
   👉 https://ent.box.com/s/7kfo6jjyqwrl2kpavjmgn28rts53x29u
 
 Feel free to navigate through the Box folder to locate your desired certification materials, handouts, or training resources.
