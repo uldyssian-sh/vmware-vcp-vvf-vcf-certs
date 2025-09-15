@@ -1,5 +1,22 @@
 # VMware Cloud Foundation (VCF) Certification Paths
 
+## Table of Contents
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support](#support)
+
+## Prerequisites
+
+Before using this project, ensure you have:
+- Required tools and dependencies
+- Proper access credentials
+- System requirements met
+
+
 This repository serves as a clean, curated **index of VMware Cloud Foundation (VCF) certification paths and related resources** hosted on an official VMware Box folder.
 
 ---
@@ -60,3 +77,21 @@ Feel free to submit a pull request to:
 ---
 
 *Enterprise-ready repository with automated workflows and security features.*
+
+## Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+- How to submit issues
+- How to propose changes
+- Code style guidelines
+- Review process
+
+## Support
+
+- 📖 [Wiki Documentation](../../wiki)
+- 💬 [Discussions](../../discussions)
+- 🐛 [Issue Tracker](../../issues)
+- 🔒 [Security Policy](SECURITY.md)
+
+---
+**Made with ❤️ for the community**
