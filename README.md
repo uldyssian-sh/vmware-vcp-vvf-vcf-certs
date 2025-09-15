@@ -50,3 +50,11 @@ Feel free to submit a pull request to:
 - Update the Box link if VMware changes it.
 - Add supplementary official links or blog references for new certification releases.
 - Fix typos or adjust formatting for clarity.
+
+## 👨‍💻 Author
+
+**LT** - [GitHub Profile](https://github.com/uldyssian-sh)
+
+---
+
+*Enterprise-ready repository with automated workflows and security features.*
