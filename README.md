@@ -34,13 +34,15 @@ This README contains:
 
 ##  Copyright & Usage
 
-All materials in the Box folder are **© VMware/Broadcom – All Rights Reserved**. This repository is a **link index only** and **does not host any copyrighted content**.
+All materials in the Box folder are **© VMware/Broadcom – All Rights Reserved**.
+This repository is a **link index only** and **does not host any copyrighted content**.
 
 ---
 
 ##  License for This Repository
 
-This repository’s own content (README, file list, structure) is licensed under the **MIT License**. See [LICENSE](./LICENSE) for details.
+This repository’s own content (README, file list, structure) is licensed under the **MIT License**.
+See [LICENSE](./LICENSE) for details.
 
 ---
 
