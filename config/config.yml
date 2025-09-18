@@ -1,0 +1,28 @@
+app:
+  name: vmware-vcp-vvf-vcf-certs
+  version: "1.0.0"
+  debug: false
+  environment: production
+
+logging:
+  level: INFO
+  format: json
+  file: vmware-certs.log
+
+vcenter:
+  host: ""
+  username: ""
+  password: ""
+  port: 443
+  verify_ssl: true
+  timeout: 30
+
+certificates:
+  backup_path: "./backups"
+  renewal_threshold_days: 30
+  validation_interval_hours: 24
+
+security:
+  encryption_enabled: true
+  audit_logging: true
+  secure_storage: true

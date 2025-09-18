@@ -1,11 +1,32 @@
 # Core dependencies
-requests>=2.30.0
+requests>=2.31.0
 pyyaml>=6.0.1
-click>=8.1.0
+click>=8.1.7
 python-dotenv>=1.0.0
+cryptography>=41.0.0
+certifi>=2023.7.22
+
+# VMware dependencies
+pyvmomi>=8.0.2.0.1
+vapi-client-bindings>=4.1.0
+vapi-runtime>=2.40.0
+vapi-common-client>=2.40.0
 
 # Development dependencies
 pytest>=7.4.0
-black>=23.0.0
-flake8>=6.0.0
-mypy>=1.5.0
+pytest-cov>=4.1.0
+pytest-xdist>=3.3.1
+black>=23.9.1
+flake8>=6.1.0
+mypy>=1.6.0
+bandit>=1.7.5
+safety>=2.3.5
+pip-audit>=2.6.1
+
+# Documentation
+mkdocs>=1.5.3
+mkdocs-material>=9.4.6
+
+# Monitoring and logging
+prometheus-client>=0.17.1
+structlog>=23.1.0

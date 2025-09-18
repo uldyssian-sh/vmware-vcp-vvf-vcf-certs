@@ -1,0 +1,149 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vmware-vcp-vvf-vcf-certs"
+version = "1.0.0"
+description = "Enterprise VMware certificate management solution"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "uldyssian-sh", email = "25517637+uldyssian-sh@users.noreply.github.com"}
+]
+maintainers = [
+    {name = "uldyssian-sh", email = "25517637+uldyssian-sh@users.noreply.github.com"}
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: System Administrators",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Security :: Cryptography",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+keywords = ["vmware", "certificates", "vcenter", "vcf", "automation", "enterprise"]
+requires-python = ">=3.8"
+dependencies = [
+    "requests>=2.31.0",
+    "pyyaml>=6.0.1",
+    "click>=8.1.7",
+    "python-dotenv>=1.0.0",
+    "cryptography>=41.0.0",
+    "certifi>=2023.7.22"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "pytest-xdist>=3.3.1",
+    "black>=23.9.1",
+    "flake8>=6.1.0",
+    "mypy>=1.6.0",
+    "bandit>=1.7.5",
+    "safety>=2.3.5",
+    "pip-audit>=2.6.1",
+    "pre-commit>=3.4.0"
+]
+vmware = [
+    "pyvmomi>=8.0.2.0.1",
+    "vapi-client-bindings>=4.1.0",
+    "vapi-runtime>=2.40.0",
+    "vapi-common-client>=2.40.0"
+]
+monitoring = [
+    "prometheus-client>=0.17.1",
+    "structlog>=23.1.0"
+]
+docs = [
+    "mkdocs>=1.5.3",
+    "mkdocs-material>=9.4.6"
+]
+
+[project.urls]
+Homepage = "https://github.com/uldyssian-sh/vmware-vcp-vvf-vcf-certs"
+Repository = "https://github.com/uldyssian-sh/vmware-vcp-vvf-vcf-certs.git"
+Issues = "https://github.com/uldyssian-sh/vmware-vcp-vvf-vcf-certs/issues"
+Changelog = "https://github.com/uldyssian-sh/vmware-vcp-vvf-vcf-certs/blob/main/CHANGELOG.md"
+Documentation = "https://github.com/uldyssian-sh/vmware-vcp-vvf-vcf-certs/wiki"
+
+[project.scripts]
+vmware-certs = "main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["main*", "src*"]
+exclude = ["tests*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+known_first_party = ["main", "src"]
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[tool.bandit]
+exclude_dirs = ["tests", "venv", ".venv"]
+skips = ["B101", "B601"]
+
+[tool.coverage.run]
+source = ["."]
+omit = [
+    "*/tests/*",
+    "*/venv/*",
+    "*/.venv/*",
+    "*/build/*",
+    "*/dist/*"
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:"
+]
