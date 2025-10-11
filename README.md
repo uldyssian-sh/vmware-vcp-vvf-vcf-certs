@@ -142,6 +142,7 @@ Complete certification guide for **2025 VMware Cloud Foundation (VCF) Certificat
 
 ## 🔗 Official Resources
 
+- [VMware Cloud Foundation Certification Guide](https://ent.box.com/s/7kfo6jjyqwrl2kpavjmgn28rts53x29u)
 - [Broadcom VMware Learning Platform](https://learning.broadcom.com)
 - [VMware Cloud Foundation Documentation](https://docs.vmware.com/en/VMware-Cloud-Foundation/)
 - [VMware Community](https://communities.vmware.com/)
