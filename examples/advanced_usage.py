@@ -8,7 +8,7 @@ import os
 import json
 import logging
 from pathlib import Path
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -72,7 +72,7 @@ class AdvancedCertManager(VMwareCertManager):
         certificates = self.get_certificate_status()
         
         report = {
-            'generated_at': datetime.now().isoformat(),
+            'generated_at': datetime.now(timezone.utc).isoformat(),
             'total_certificates': len(certificates),
             'valid_certificates': len([c for c in certificates if c['status'] == 'valid']),
             'expiring_certificates': len([c for c in certificates if c['status'] == 'expiring_soon']),
@@ -130,8 +130,12 @@ def example_certificate_reporting():
     
     # Save report to file
     report_file = f"certificate_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
-    with open(report_file, 'w') as f:
-        json.dump(report, f, indent=2)
+    try:
+        with open(report_file, 'w') as f:
+            json.dump(report, f, indent=2)
+    except (IOError, OSError) as e:
+        print(f"Error saving report: {e}")
+        return None
     
     print(f"Certificate Report Generated: {report_file}")
     print(f"  Total Certificates: {report['total_certificates']}")
@@ -189,7 +193,8 @@ def example_batch_operations():
             print(f"  {operation_name}: {status}")
         except Exception as e:
             results[operation_name] = False
-            print(f"  {operation_name}: ❌ Error - {e}")
+            print(f"  {operation_name}: ❌ Error - {str(e)[:100]}")
+            logger.error(f"Operation {operation_name} failed: {e}", exc_info=True)
     
     # Summary
     successful_ops = sum(1 for result in results.values() if result)

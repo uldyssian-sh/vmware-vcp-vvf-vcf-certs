@@ -89,7 +89,7 @@ cp .env.template .env
 # Required VMware settings
 export VCENTER_HOST="vcenter.example.com"
 export VCENTER_USERNAME="administrator@vsphere.local"
-export VCENTER_PASSWORD="your-secure-password"
+export VCENTER_PASSWORD="${VCENTER_PASSWORD}"  # Use environment variable
 ```
 
 ### Configuration File Example
@@ -104,7 +104,7 @@ app:
 vcenter:
   host: "vcenter.example.com"
   username: "administrator@vsphere.local"
-  password: "secure-password"
+  password: "${VCENTER_PASSWORD}"  # Use environment variable
   port: 443
 
 certificates:

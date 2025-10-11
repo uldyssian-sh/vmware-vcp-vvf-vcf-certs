@@ -18,7 +18,11 @@ def example_basic_validation():
     print("=== Basic Certificate Validation ===")
     
     # Initialize with default configuration
-    manager = VMwareCertManager()
+    try:
+        manager = VMwareCertManager()
+    except Exception as e:
+        print(f"Failed to initialize certificate manager: {e}")
+        return False
     
     # Validate certificates
     is_valid = manager.validate_certificates()
@@ -35,17 +39,17 @@ def example_custom_config():
     """Example: Using custom configuration"""
     print("\n=== Custom Configuration Example ===")
     
-    # Custom configuration
+    # Custom configuration - use environment variables for credentials
     config = {
         'app': {
             'name': 'custom-cert-manager',
             'debug': True
         },
         'vcenter': {
-            'host': 'vcenter.example.com',
-            'username': 'administrator@vsphere.local',
-            'password': 'secure-password',
-            'port': 443
+            'host': os.getenv('VCENTER_HOST', 'vcenter.example.com'),
+            'username': os.getenv('VCENTER_USERNAME', 'administrator@vsphere.local'),
+            'password': os.getenv('VCENTER_PASSWORD', ''),
+            'port': int(os.getenv('VCENTER_PORT', '443'))
         },
         'logging': {
             'level': 'DEBUG'
@@ -66,29 +70,33 @@ def example_certificate_operations():
     """Example: Complete certificate operations workflow"""
     print("\n=== Complete Certificate Operations ===")
     
-    manager = VMwareCertManager()
-    
-    # Step 1: Backup existing certificates
-    print("1. Creating certificate backup...")
-    backup_success = manager.backup_certificates()
-    print(f"   Backup result: {'✅ Success' if backup_success else '❌ Failed'}")
-    
-    # Step 2: Validate certificates
-    print("2. Validating certificates...")
-    validation_success = manager.validate_certificates()
-    print(f"   Validation result: {'✅ Valid' if validation_success else '❌ Invalid'}")
-    
-    # Step 3: Renew if needed
-    if not validation_success:
-        print("3. Renewing certificates...")
-        renewal_success = manager.renew_certificates()
-        print(f"   Renewal result: {'✅ Success' if renewal_success else '❌ Failed'}")
-    else:
-        print("3. Certificate renewal not needed")
-        renewal_success = True
-    
-    # Return overall success
-    return backup_success and validation_success and renewal_success
+    try:
+        manager = VMwareCertManager()
+        
+        # Step 1: Backup existing certificates
+        print("1. Creating certificate backup...")
+        backup_success = manager.backup_certificates()
+        print(f"   Backup result: {'✅ Success' if backup_success else '❌ Failed'}")
+        
+        # Step 2: Validate certificates
+        print("2. Validating certificates...")
+        validation_success = manager.validate_certificates()
+        print(f"   Validation result: {'✅ Valid' if validation_success else '❌ Invalid'}")
+        
+        # Step 3: Renew if needed
+        if not validation_success:
+            print("3. Renewing certificates...")
+            renewal_success = manager.renew_certificates()
+            print(f"   Renewal result: {'✅ Success' if renewal_success else '❌ Failed'}")
+        else:
+            print("3. Certificate renewal not needed")
+            renewal_success = True
+        
+        # Return overall success
+        return backup_success and validation_success and renewal_success
+    except Exception as e:
+        print(f"❌ Certificate operations failed: {e}")
+        return False
 
 
 def example_error_handling():
@@ -96,12 +104,12 @@ def example_error_handling():
     print("\n=== Error Handling Example ===")
     
     try:
-        # Initialize with invalid configuration
+        # Initialize with invalid configuration for testing
         config = {
             'vcenter': {
                 'host': 'invalid-host.example.com',
-                'username': 'invalid-user',
-                'password': 'invalid-password'
+                'username': os.getenv('TEST_USERNAME', 'test-user'),
+                'password': os.getenv('TEST_PASSWORD', '')
             }
         }
         
@@ -123,10 +131,15 @@ def main():
     
     try:
         # Run examples
-        example_basic_validation()
-        example_custom_config()
-        example_certificate_operations()
+        results = []
+        results.append(example_basic_validation())
+        results.append(example_custom_config())
+        results.append(example_certificate_operations())
         example_error_handling()
+        
+        if not all(r for r in results if r is not None):
+            print("\n⚠️ Some examples had issues")
+            return 1
         
         print("\n" + "=" * 50)
         print("✅ All examples completed successfully")

@@ -10,9 +10,9 @@ logging:
   file: vmware-certs.log
 
 vcenter:
-  host: ""
-  username: ""
-  password: ""
+  host: "${VCENTER_HOST}"  # Use environment variable
+  username: "${VCENTER_USERNAME}"  # Use environment variable
+  password: "${VCENTER_PASSWORD}"  # Use environment variable
   port: 443
   verify_ssl: true
   timeout: 30
