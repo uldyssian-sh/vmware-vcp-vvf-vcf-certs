@@ -131,9 +131,10 @@ def example_certificate_reporting():
     # Save report to file
     report_file = f"certificate_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
     try:
+        os.makedirs(os.path.dirname(report_file) or '.', exist_ok=True)
         with open(report_file, 'w') as f:
             json.dump(report, f, indent=2)
-    except (IOError, OSError) as e:
+    except (IOError, OSError, PermissionError) as e:
         print(f"Error saving report: {e}")
         return None
     
@@ -241,7 +242,11 @@ def example_configuration_management():
     print(f"Log Level: {config['logging']['level']}")
     
     # Initialize manager with environment-specific config
-    manager = AdvancedCertManager(config=config)
+    try:
+        manager = AdvancedCertManager(config=config)
+    except Exception as e:
+        print(f"Failed to initialize manager: {e}")
+        return None
     
     return config
 

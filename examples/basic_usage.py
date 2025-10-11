@@ -57,11 +57,15 @@ def example_custom_config():
     }
     
     # Initialize with custom config
-    manager = VMwareCertManager(config=config)
-    
-    # Run validation
-    result = manager.validate_certificates()
-    print(f"Validation result: {result}")
+    try:
+        manager = VMwareCertManager(config=config)
+        
+        # Run validation
+        result = manager.validate_certificates()
+        print(f"Validation result: {result}")
+    except Exception as e:
+        print(f"Failed to initialize or validate: {e}")
+        return False
     
     return result
 
@@ -116,8 +120,12 @@ def example_error_handling():
         manager = VMwareCertManager(config=config)
         
         # This should fail gracefully
-        result = manager.validate_certificates()
-        print(f"Validation result: {result}")
+        try:
+            result = manager.validate_certificates()
+            print(f"Validation result: {result}")
+        except Exception as inner_e:
+            print(f"Validation failed as expected: {inner_e}")
+            result = False
         
     except Exception as e:
         print(f"Caught exception: {e}")

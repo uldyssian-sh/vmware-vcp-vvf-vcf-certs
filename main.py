@@ -45,8 +45,12 @@ class VMwareCertManager:
         config_path = Path("config/config.yml")
         
         if config_path.exists():
-            with open(config_path, 'r') as f:
-                return yaml.safe_load(f)
+            try:
+                with open(config_path, 'r') as f:
+                    return yaml.safe_load(f)
+            except (IOError, yaml.YAMLError) as e:
+                logger.error(f"Failed to load config file: {e}")
+                # Fall through to default config
         
         # Default configuration
         return {
@@ -104,10 +108,15 @@ class VMwareCertManager:
             return False
     
     def run(self) -> int:
-        """Run the certificate manager"""
+        """Run the certificate manager with comprehensive error handling"""
         logger.info("Starting VMware Certificate Manager")
         
         try:
+            # Validate configuration first
+            if not self.config.get('vcenter', {}).get('host'):
+                logger.error("vCenter host not configured")
+                return 1
+            
             # Main application logic
             if self.validate_certificates():
                 logger.info("All certificates are valid")
@@ -115,8 +124,11 @@ class VMwareCertManager:
                 logger.warning("Some certificates need attention")
             
             return 0
+        except KeyboardInterrupt:
+            logger.info("Operation cancelled by user")
+            return 130
         except Exception as e:
-            logger.error(f"Application error: {e}")
+            logger.error(f"Application error: {e}", exc_info=True)
             return 1
 
 
@@ -135,33 +147,49 @@ def cli(debug: bool, config: Optional[str]):
 
 @cli.command()
 def validate():
-    """Validate VMware certificates"""
-    app = VMwareCertManager()
-    success = app.validate_certificates()
-    sys.exit(0 if success else 1)
+    """Validate VMware certificates with error handling"""
+    try:
+        app = VMwareCertManager()
+        success = app.validate_certificates()
+        sys.exit(0 if success else 1)
+    except Exception as e:
+        logger.error(f"Validation command failed: {e}")
+        sys.exit(1)
 
 
 @cli.command()
 def renew():
-    """Renew VMware certificates"""
-    app = VMwareCertManager()
-    success = app.renew_certificates()
-    sys.exit(0 if success else 1)
+    """Renew VMware certificates with error handling"""
+    try:
+        app = VMwareCertManager()
+        success = app.renew_certificates()
+        sys.exit(0 if success else 1)
+    except Exception as e:
+        logger.error(f"Renewal command failed: {e}")
+        sys.exit(1)
 
 
 @cli.command()
 def backup():
-    """Backup VMware certificates"""
-    app = VMwareCertManager()
-    success = app.backup_certificates()
-    sys.exit(0 if success else 1)
+    """Backup VMware certificates with error handling"""
+    try:
+        app = VMwareCertManager()
+        success = app.backup_certificates()
+        sys.exit(0 if success else 1)
+    except Exception as e:
+        logger.error(f"Backup command failed: {e}")
+        sys.exit(1)
 
 
 @cli.command()
 def run():
-    """Run the certificate manager"""
-    app = VMwareCertManager()
-    sys.exit(app.run())
+    """Run the certificate manager with error handling"""
+    try:
+        app = VMwareCertManager()
+        sys.exit(app.run())
+    except Exception as e:
+        logger.error(f"Run command failed: {e}")
+        sys.exit(1)
 
 
 def main():
