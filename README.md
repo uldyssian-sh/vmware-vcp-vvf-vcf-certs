@@ -1,116 +1,151 @@
-# VMware Cloud Foundation (VCF) Certification Guide
+# 2025 VMware Cloud Foundation Certification Paths
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![VMware VCF](https://img.shields.io/badge/VMware-VCF-blue.svg)](https://www.vmware.com/products/cloud-foundation.html)
+[![Broadcom](https://img.shields.io/badge/Broadcom-VMware-red.svg)](https://www.broadcom.com/products/vmware)
 
 ## 📋 Overview
 
-Complete certification guide for VMware Cloud Foundation (VCF) - your streamlined path to private cloud expertise. This repository contains study materials, practice exams, and hands-on labs for VCF certifications.
+Complete certification guide for **2025 VMware Cloud Foundation (VCF) Certification Paths** - your streamlined path to private cloud expertise. This repository contains study materials, practice exams, and hands-on labs for all **5 VCP-VCF certifications**.
 
-**Based on:** [VCF Certification Updates - Streamlined Path to Private Cloud Expertise](https://blogs.vmware.com/cloud-foundation/2025/07/29/vcf-certification-updates-a-streamlined-path-to-private-cloud-expertise/)
+**VCF Focused:** Architect, Implement and Support
 
-## 🎯 Certification Tracks
+## 🎯 2025 VCP Certification Tracks
 
-### VCP-VCF (VMware Certified Professional - VMware Cloud Foundation)
-- **Prerequisites:** VCA-Cloud or equivalent experience
-- **Exam Code:** 2V0-33.22
-- **Duration:** 135 minutes
-- **Questions:** 70 questions
-- **Passing Score:** 300/500
+### 1. VCP-VCF Architect (2V0-13.25)
+**Design VMware Cloud Foundation Solutions**
+- Validate skills in designing VCF solutions focusing on AMPRS (Availability, Manageability, Performance, Recoverability, Security)
+- Convert business objectives into logical and physical design
+- Assess and document risks, assumptions and constraints
+- **Recommended Course:** VMware Cloud Foundation: Solution Architecture and Design
 
-### VCAP-VCF (VMware Certified Advanced Professional - VMware Cloud Foundation)
-- **Prerequisites:** VCP-VCF certification
-- **Exam Code:** 3V0-32.23
-- **Duration:** 190 minutes
-- **Format:** Hands-on lab exam
+### 2. VCP-VCF Administrator (2V0-17.25) 
+**Install, Configure, and Manage VMware Cloud Foundation**
+- Validate skills installing, configuring, and managing VCF solution
+- Optimize performance and efficiency with VCF
+- Identify components and use cases for VCF solution
+- **Recommended Courses:** 
+  - VMware Cloud Foundation: Build, Manage, and Secure
+  - VMware Cloud Foundation: Automate and Operate
 
-### VCDX-VCF (VMware Certified Design Expert - VMware Cloud Foundation)
-- **Prerequisites:** VCAP-VCF certification
-- **Format:** Design submission + defense
+### 3. VCP-VVF Administrator (2V0-16.25)
+**VMware vSphere Foundation Administrator**
+- Install, configure, and manage VMware vSphere Foundation solution
+- Optimize performance and efficiency with vSphere Foundation
+- Identify components and use cases for vSphere Foundation
+- **Recommended Course:** vSphere Foundation: Build, Manage and Operate
 
-## 📚 Study Materials
+### 4. VCP-VCF Support (2V0-15.25)
+**VMware Cloud Foundation Support Specialist**
+- Perform basic diagnostics and troubleshooting of VCF components
+- Quickly resolve common full-stack VCF issues
+- Identify appropriate troubleshooting tools and techniques
+- **Recommended Course:** VMware Cloud Foundation: Troubleshooting
+- **Release Date:** Week of August 25, 2025
 
-### Core Topics
-- [VCF Architecture](docs/architecture.md)
-- [SDDC Manager](docs/sddc-manager.md)
-- [Workload Domains](docs/workload-domains.md)
-- [Lifecycle Management](docs/lifecycle-management.md)
-- [Networking & Security](docs/networking-security.md)
-- [Storage Management](docs/storage.md)
-- [Monitoring & Troubleshooting](docs/monitoring.md)
+### 5. VCP-VVF Support (2V0-18.25)
+**VMware vSphere Foundation Support Specialist**
+- Perform diagnostics and troubleshooting of vSphere Foundation components
+- Resolve common vSphere Foundation issues
+- Use appropriate troubleshooting tools and techniques
+- **Recommended Course:** VMware Cloud Foundation: Troubleshooting
+- **Release Date:** Week of August 25, 2025
 
-### Practice Labs
-- [Lab 1: VCF Deployment](labs/lab1-deployment/)
-- [Lab 2: Workload Domain Creation](labs/lab2-workload-domains/)
-- [Lab 3: Lifecycle Operations](labs/lab3-lifecycle/)
-- [Lab 4: Troubleshooting](labs/lab4-troubleshooting/)
+## 📚 Study Materials by Track
 
-## 🚀 Quick Start
+### [VCP-VCF Architect](docs/architect/)
+- Solution Architecture and Design
+- AMPRS Design Principles
+- Business Requirements Analysis
+- Risk Assessment and Documentation
 
-### Study Plan (8 weeks)
-```
-Week 1-2: VCF Architecture & Components
-Week 3-4: SDDC Manager & Deployment
-Week 5-6: Workload Domains & Operations
-Week 7-8: Troubleshooting & Practice Exams
-```
+### [VCP-VCF Administrator](docs/administrator/)
+- VCF Installation and Configuration
+- Build, Manage, and Secure Operations
+- Automation and Operations
+- Performance Optimization
 
-### Prerequisites
-- VMware vSphere knowledge
-- Basic networking concepts
-- Storage fundamentals
-- Windows/Linux administration
+### [VCP-VVF Administrator](docs/vvf-administrator/)
+- vSphere Foundation Fundamentals
+- Build, Manage and Operate
+- Performance Tuning
+- Component Management
 
-## 📖 Documentation Structure
+### [VCP-VCF Support](docs/vcf-support/)
+- Diagnostics and Troubleshooting
+- Issue Resolution Procedures
+- Troubleshooting Tools and Processes
+- Root Cause Analysis
 
-```
-docs/
-├── architecture.md          # VCF Architecture Overview
-├── sddc-manager.md         # SDDC Manager Operations
-├── workload-domains.md     # Workload Domain Management
-├── lifecycle-management.md # Lifecycle Operations
-├── networking-security.md  # NSX-T Integration
-├── storage.md             # vSAN & Storage Policies
-└── monitoring.md          # vRealize Suite Integration
+### [VCP-VVF Support](docs/vvf-support/)
+- vSphere Foundation Troubleshooting
+- Issue Resolution Techniques
+- Diagnostic Tools and Methods
+- Support Best Practices
 
-labs/
-├── lab1-deployment/       # VCF Deployment Lab
-├── lab2-workload-domains/ # Workload Domain Lab
-├── lab3-lifecycle/        # Lifecycle Management Lab
-└── lab4-troubleshooting/  # Troubleshooting Lab
+## 🚀 Quick Start Guide
 
-practice-exams/
-├── vcp-vcf/              # VCP-VCF Practice Questions
-├── vcap-vcf/             # VCAP-VCF Lab Scenarios
-└── answers/              # Answer Keys & Explanations
-```
+### Study Path Recommendations
+
+**For Architects:**
+1. Start with VCP-VCF Architect (2V0-13.25)
+2. Focus on solution design and AMPRS principles
+3. Practice business requirement analysis
+
+**For Administrators:**
+1. Begin with VCP-VVF Administrator (2V0-16.25) - Foundation
+2. Progress to VCP-VCF Administrator (2V0-17.25) - Full Stack
+3. Master automation and operations
+
+**For Support Professionals:**
+1. Choose VCP-VCF Support (2V0-15.25) for full-stack support
+2. Or VCP-VVF Support (2V0-18.25) for vSphere Foundation support
+3. Focus on troubleshooting methodologies
+
+## 📖 Training Courses
+
+### Official VMware Training
+- **VMware Cloud Foundation: Solution Architecture and Design** (ILT, On Demand)
+- **VMware Cloud Foundation: Build, Manage, and Secure** (ILT, On Demand)
+- **VMware Cloud Foundation: Automate and Operate** (ILT, On Demand)
+- **VMware Cloud Foundation: Troubleshooting** (ILT, On Demand)
+- **vSphere Foundation: Build, Manage and Operate** (On Demand)
+
+### Access Requirements
+**Note:** You MUST be logged into the Learning@Broadcom platform for links to work.
+- [View our video](https://learning.broadcom.com) 
+- [Download VCF Getting Started Guide](https://learning.broadcom.com)
 
 ## 🎓 Certification Benefits
 
 ### Career Advancement
-- **Average Salary Increase:** 15-25%
-- **Job Opportunities:** Cloud Architect, VCF Specialist
-- **Industry Recognition:** VMware Partner Requirements
+- **Role-based paths** for administrators, architects, and support professionals
+- **Industry alignment** with evolving private cloud infrastructure trends
+- **Future-proof** your career with Broadcom's VMware technologies
 
 ### Technical Skills
-- Private cloud design and implementation
-- Hybrid cloud architecture
-- Automation and orchestration
-- Enterprise-grade troubleshooting
+- Modern private cloud environment management
+- VMware Cloud Foundation expertise
+- Full-stack troubleshooting capabilities
+- Solution architecture and design
+
+## 📅 2025 Release Schedule
+
+### Available Now
+- VCP-VCF Architect (2V0-13.25)
+- VCP-VCF Administrator (2V0-17.25)
+- VCP-VVF Administrator (2V0-16.25)
+
+### Coming August 2025
+- VCP-VCF Support (2V0-15.25) - Week of August 25, 2025
+- VCP-VVF Support (2V0-18.25) - Week of August 25, 2025
 
 ## 🔗 Official Resources
 
-- [VMware Learning Platform](https://www.vmware.com/learning.html)
-- [VCF Documentation](https://docs.vmware.com/en/VMware-Cloud-Foundation/)
-- [VMware Hands-on Labs](https://labs.hol.vmware.com/)
+- [Broadcom VMware Learning Platform](https://learning.broadcom.com)
+- [VMware Cloud Foundation Documentation](https://docs.vmware.com/en/VMware-Cloud-Foundation/)
 - [VMware Community](https://communities.vmware.com/)
-
-## 📅 Exam Schedule
-
-### 2024 Updates
-- **Q1:** New VCP-VCF 2024 exam release
-- **Q2:** VCAP-VCF lab exam updates
-- **Q3:** VCDX-VCF design requirements update
+- [Broadcom Support Portal](https://support.broadcom.com/)
 
 ## 🤝 Contributing
 
@@ -122,6 +157,8 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file.
 
 ---
 
-**🚀 Start your VCF certification journey today!**
+**🚀 Future Proof Your Career with 2025 VCF Certifications!**
 
-*Made with ❤️ for the VMware community*
+*When innovation happens at the speed of light, it's hard to keep up. Broadcom's VMware Cloud Foundation certifications help IT professionals stay competitive and aligned with evolving private cloud infrastructure trends.*
+
+**[EXPLORE CERTIFICATIONS →](https://learning.broadcom.com)**
