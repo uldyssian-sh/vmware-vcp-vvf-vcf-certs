@@ -113,8 +113,8 @@ Complete certification guide for **2025 VMware Cloud Foundation (VCF) Certificat
 
 ### Access Requirements
 **Note:** You MUST be logged into the Learning@Broadcom platform for links to work.
-- [View our video](https://learning.broadcom.com) 
-- [Download VCF Getting Started Guide](https://learning.broadcom.com)
+- [View our video](https://www.broadcom.com/support/education) 
+- [Download VCF Getting Started Guide](https://www.broadcom.com/support/education)
 
 ## 🎓 Certification Benefits
 
@@ -143,7 +143,7 @@ Complete certification guide for **2025 VMware Cloud Foundation (VCF) Certificat
 ## 🔗 Official Resources
 
 - [VMware Cloud Foundation Certification Guide](https://ent.box.com/s/7kfo6jjyqwrl2kpavjmgn28rts53x29u)
-- [Broadcom VMware Learning Platform](https://learning.broadcom.com)
+- [Broadcom VMware Learning Platform](https://www.broadcom.com/support/education)
 - [VMware Cloud Foundation Documentation](https://docs.vmware.com/en/VMware-Cloud-Foundation/)
 - [VMware Community](https://communities.vmware.com/)
 - [Broadcom Support Portal](https://support.broadcom.com/)
@@ -162,4 +162,4 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file.
 
 *When innovation happens at the speed of light, it's hard to keep up. Broadcom's VMware Cloud Foundation certifications help IT professionals stay competitive and aligned with evolving private cloud infrastructure trends.*
 
-**[EXPLORE CERTIFICATIONS →](https://learning.broadcom.com)**
+**[EXPLORE CERTIFICATIONS →](https://www.broadcom.com/support/education)**
