@@ -43,4 +43,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
 EXPOSE 8080
 
 # Default command
-CMD ["python", "main.py", "run"]
+CMD ["python", "main.py", "run"]# Updated Sun Nov  9 12:52:05 CET 2025

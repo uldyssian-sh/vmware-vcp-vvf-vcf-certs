@@ -64,3 +64,4 @@ VMware Cloud Foundation (VCF) is a unified SDDC platform that bundles compute, s
 - Network pools and IP allocation
 - Certificate management workflows
 - Backup and recovery procedures# Updated Sun Nov  9 12:50:33 CET 2025
+# Updated Sun Nov  9 12:52:05 CET 2025
