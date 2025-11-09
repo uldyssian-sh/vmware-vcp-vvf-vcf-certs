@@ -54,4 +54,3 @@ repos:
     hooks:
       - id: ggshield
         language: python
-        stages: [commit]# Updated 20251109_123828

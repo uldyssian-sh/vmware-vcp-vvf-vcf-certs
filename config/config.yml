@@ -25,4 +25,3 @@ certificates:
 security:
   encryption_enabled: true
   audit_logging: true
-  secure_storage: true# Updated 20251109_123828

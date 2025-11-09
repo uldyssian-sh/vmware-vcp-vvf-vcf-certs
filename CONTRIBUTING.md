@@ -47,7 +47,6 @@ We welcome contributions from the VMware community! Here's how you can help impr
 ### Pull Request Requirements
 - Clear description of changes
 - Reference to related issues
-- Updated documentation if needed
 - Tested content (for labs)
 
 ## Content Categories
