@@ -1,7 +1,5 @@
 # 2025 VMware Cloud Foundation Certification Paths
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![VMware VCF](https://img.shields.io/badge/VMware-VCF-blue.svg)](https://www.vmware.com/products/cloud-foundation.html)
 [![Broadcom](https://img.shields.io/badge/Broadcom-VMware-red.svg)](https://www.broadcom.com/products/vmware)
 
 ## 📋 Overview
