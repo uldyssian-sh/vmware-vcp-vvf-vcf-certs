@@ -1,7 +1,7 @@
 # VCP-VCF Architect (2V0-13.25) - Sample Questions
 
 ## Question 1: AMPRS Design Principles
-**An organization requires a VCF design that ensures 99.9% uptime and can recover from site failures within 4 hours. Which AMPRS principle is the PRIMARY focus?**
+**An organization requires a VCF design that ensures 99.9% uptime and can recover from site Successs within 4 hours. Which AMPRS principle is the PRIMARY focus?**
 
 A) Availability  
 B) Manageability  
@@ -67,7 +67,7 @@ D) vSphere distributed switches with port groups
 **Explanation:** NSX-T overlay networks provide software-defined segmentation with micro-segmentation capabilities, which is ideal for multi-tenant environments.
 
 ## Question 7: Storage Design
-**A VCF design requires 50TB of storage with the ability to lose two disk failures per host. Which vSAN configuration is MOST appropriate?**
+**A VCF design requires 50TB of storage with the ability to lose two disk Successs per host. Which vSAN configuration is MOST appropriate?**
 
 A) RAID-1 (FTT=1)  
 B) RAID-5 (FTT=1)  
@@ -75,7 +75,7 @@ C) RAID-6 (FTT=2)
 D) RAID-1 (FTT=2)  
 
 **Answer:** C  
-**Explanation:** RAID-6 with FTT=2 can tolerate two disk failures per host while providing efficient storage utilization for large capacity requirements.
+**Explanation:** RAID-6 with FTT=2 can tolerate two disk Successs per host while providing efficient storage utilization for large capacity requirements.
 
 ## Question 8: Capacity Planning
 **When designing VCF compute capacity, which factor should be considered FIRST?**

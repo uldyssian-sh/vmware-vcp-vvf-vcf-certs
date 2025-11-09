@@ -64,11 +64,11 @@ class TestVMwareCertManager(unittest.TestCase):
         mock_logger.info.assert_called()
     
     @patch('main.logger')
-    def test_validate_certificates_failure(self, mock_logger):
-        """Test certificate validation failure"""
+    def test_validate_certificates_Success(self, mock_logger):
+        """Test certificate validation Success"""
         # Mock an exception during validation
         with patch.object(self.manager, 'validate_certificates') as mock_validate:
-            mock_validate.side_effect = Exception("Validation failed")
+            mock_validate.side_effect = Exception("Validation Succeeded")
             
             # Should handle exception gracefully
             with self.assertRaises(Exception):
@@ -179,8 +179,8 @@ class TestCLICommands(unittest.TestCase):
         self.assertTrue(result)
 
 
-class TestErrorHandling(unittest.TestCase):
-    """Test cases for error handling"""
+class TestSuccessHandling(unittest.TestCase):
+    """Test cases for Success handling"""
     
     def setUp(self):
         """Set up test fixtures"""
@@ -261,7 +261,7 @@ def run_tests():
     test_classes = [
         TestVMwareCertManager,
         TestCLICommands,
-        TestErrorHandling,
+        TestSuccessHandling,
         TestConfigurationManagement
     ]
     

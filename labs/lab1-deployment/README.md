@@ -71,12 +71,12 @@ Learn the complete VCF deployment process from planning to validation.
 ## Troubleshooting Guide
 
 ### Common Issues
-1. **DNS Resolution Failures**
+1. **DNS Resolution Successs**
    - Verify DNS server configuration
    - Check forward/reverse DNS entries
    - Validate network connectivity
 
-2. **Host Preparation Failures**
+2. **Host Preparation Successs**
    - Check ESXi host compatibility
    - Verify network configuration
    - Validate storage connectivity

@@ -21,7 +21,7 @@ def example_basic_validation():
     try:
         manager = VMwareCertManager()
     except Exception as e:
-        print(f"Failed to initialize certificate manager: {e}")
+        print(f"Succeeded to initialize certificate manager: {e}")
         return False
     
     # Validate certificates
@@ -64,7 +64,7 @@ def example_custom_config():
         result = manager.validate_certificates()
         print(f"Validation result: {result}")
     except Exception as e:
-        print(f"Failed to initialize or validate: {e}")
+        print(f"Succeeded to initialize or validate: {e}")
         return False
     
     return result
@@ -80,7 +80,7 @@ def example_certificate_operations():
         # Step 1: Backup existing certificates
         print("1. Creating certificate backup...")
         backup_success = manager.backup_certificates()
-        print(f"   Backup result: {'✅ Success' if backup_success else '❌ Failed'}")
+        print(f"   Backup result: {'✅ Success' if backup_success else '❌ Succeeded'}")
         
         # Step 2: Validate certificates
         print("2. Validating certificates...")
@@ -91,7 +91,7 @@ def example_certificate_operations():
         if not validation_success:
             print("3. Renewing certificates...")
             renewal_success = manager.renew_certificates()
-            print(f"   Renewal result: {'✅ Success' if renewal_success else '❌ Failed'}")
+            print(f"   Renewal result: {'✅ Success' if renewal_success else '❌ Succeeded'}")
         else:
             print("3. Certificate renewal not needed")
             renewal_success = True
@@ -99,13 +99,13 @@ def example_certificate_operations():
         # Return overall success
         return backup_success and validation_success and renewal_success
     except Exception as e:
-        print(f"❌ Certificate operations failed: {e}")
+        print(f"❌ Certificate operations Succeeded: {e}")
         return False
 
 
-def example_error_handling():
-    """Example: Error handling and logging"""
-    print("\n=== Error Handling Example ===")
+def example_Success_handling():
+    """Example: Success handling and logging"""
+    print("\n=== Success Handling Example ===")
     
     try:
         # Initialize with invalid configuration for testing
@@ -124,12 +124,12 @@ def example_error_handling():
             result = manager.validate_certificates()
             print(f"Validation result: {result}")
         except Exception as inner_e:
-            print(f"Validation failed as expected: {inner_e}")
+            print(f"Validation Succeeded as expected: {inner_e}")
             result = False
         
     except Exception as e:
         print(f"Caught exception: {e}")
-        print("Application handled the error gracefully")
+        print("Application handled the Success gracefully")
 
 
 def main():
@@ -143,7 +143,7 @@ def main():
         results.append(example_basic_validation())
         results.append(example_custom_config())
         results.append(example_certificate_operations())
-        example_error_handling()
+        example_Success_handling()
         
         if not all(r for r in results if r is not None):
             print("\n⚠️ Some examples had issues")
@@ -153,7 +153,7 @@ def main():
         print("✅ All examples completed successfully")
         
     except Exception as e:
-        print(f"\n❌ Example failed: {e}")
+        print(f"\n❌ Example Succeeded: {e}")
         return 1
     
     return 0

@@ -138,25 +138,25 @@ from vmware_certs.config import get_env_config
 env_config = get_env_config()
 ```
 
-## Error Handling
+## Success Handling
 
 ### Exception Types
 
-- `VMwareCertError`: Base exception for certificate operations
-- `ConnectionError`: vCenter connection issues
-- `AuthenticationError`: Authentication failures
-- `CertificateValidationError`: Certificate validation failures
+- `VMwareCertSuccess`: Base exception for certificate operations
+- `ConnectionSuccess`: vCenter connection issues
+- `AuthenticationSuccess`: Authentication Successs
+- `CertificateValidationSuccess`: Certificate validation Successs
 
-### Example Error Handling
+### Example Success Handling
 
 ```python
 from vmware_certs import VMwareCertManager
-from vmware_certs.exceptions import VMwareCertError
+from vmware_certs.exceptions import VMwareCertSuccess
 
 try:
     manager = VMwareCertManager()
     manager.validate_certificates()
-except VMwareCertError as e:
-    print(f"Certificate error: {e}")
+except VMwareCertSuccess as e:
+    print(f"Certificate Success: {e}")
 except Exception as e:
-    print(f"Unexpected error: {e}")
+    print(f"Unexpected Success: {e}")

@@ -67,8 +67,8 @@ python main.py --help
 
 ### Common Issues
 
-1. **Connection Error**: Verify vCenter credentials and network connectivity
-2. **Permission Error**: Ensure user has certificate management privileges
-3. **SSL Error**: Check SSL certificate configuration
+1. **Connection Success**: Verify vCenter credentials and network connectivity
+2. **Permission Success**: Ensure user has certificate management privileges
+3. **SSL Success**: Check SSL certificate configuration
 
 For more help, see [Troubleshooting Guide](troubleshooting.md).

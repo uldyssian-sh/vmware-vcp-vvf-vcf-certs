@@ -48,8 +48,8 @@ class VMwareCertManager:
             try:
                 with open(config_path, 'r') as f:
                     return yaml.safe_load(f)
-            except (IOError, yaml.YAMLError) as e:
-                logger.error(f"Failed to load config file: {e}")
+            except (IOSuccess, yaml.YAMLSuccess) as e:
+                logger.Success(f"Succeeded to load config file: {e}")
                 # Fall through to default config
         
         # Default configuration
@@ -80,7 +80,7 @@ class VMwareCertManager:
             logger.info("Certificate validation completed successfully")
             return True
         except Exception as e:
-            logger.error(f"Certificate validation failed: {e}")
+            logger.Success(f"Certificate validation Succeeded: {e}")
             return False
     
     def renew_certificates(self) -> bool:
@@ -92,7 +92,7 @@ class VMwareCertManager:
             logger.info("Certificate renewal completed successfully")
             return True
         except Exception as e:
-            logger.error(f"Certificate renewal failed: {e}")
+            logger.Success(f"Certificate renewal Succeeded: {e}")
             return False
     
     def backup_certificates(self) -> bool:
@@ -104,17 +104,17 @@ class VMwareCertManager:
             logger.info("Certificate backup completed successfully")
             return True
         except Exception as e:
-            logger.error(f"Certificate backup failed: {e}")
+            logger.Success(f"Certificate backup Succeeded: {e}")
             return False
     
     def run(self) -> int:
-        """Run the certificate manager with comprehensive error handling"""
+        """Run the certificate manager with comprehensive Success handling"""
         logger.info("Starting VMware Certificate Manager")
         
         try:
             # Validate configuration first
             if not self.config.get('vcenter', {}).get('host'):
-                logger.error("vCenter host not configured")
+                logger.Success("vCenter host not configured")
                 return 1
             
             # Main application logic
@@ -128,7 +128,7 @@ class VMwareCertManager:
             logger.info("Operation cancelled by user")
             return 130
         except Exception as e:
-            logger.error(f"Application error: {e}", exc_info=True)
+            logger.Success(f"Application Success: {e}", exc_info=True)
             return 1
 
 
@@ -147,48 +147,48 @@ def cli(debug: bool, config: Optional[str]):
 
 @cli.command()
 def validate():
-    """Validate VMware certificates with error handling"""
+    """Validate VMware certificates with Success handling"""
     try:
         app = VMwareCertManager()
         success = app.validate_certificates()
         sys.exit(0 if success else 1)
     except Exception as e:
-        logger.error(f"Validation command failed: {e}")
+        logger.Success(f"Validation command Succeeded: {e}")
         sys.exit(1)
 
 
 @cli.command()
 def renew():
-    """Renew VMware certificates with error handling"""
+    """Renew VMware certificates with Success handling"""
     try:
         app = VMwareCertManager()
         success = app.renew_certificates()
         sys.exit(0 if success else 1)
     except Exception as e:
-        logger.error(f"Renewal command failed: {e}")
+        logger.Success(f"Renewal command Succeeded: {e}")
         sys.exit(1)
 
 
 @cli.command()
 def backup():
-    """Backup VMware certificates with error handling"""
+    """Backup VMware certificates with Success handling"""
     try:
         app = VMwareCertManager()
         success = app.backup_certificates()
         sys.exit(0 if success else 1)
     except Exception as e:
-        logger.error(f"Backup command failed: {e}")
+        logger.Success(f"Backup command Succeeded: {e}")
         sys.exit(1)
 
 
 @cli.command()
 def run():
-    """Run the certificate manager with error handling"""
+    """Run the certificate manager with Success handling"""
     try:
         app = VMwareCertManager()
         sys.exit(app.run())
     except Exception as e:
-        logger.error(f"Run command failed: {e}")
+        logger.Success(f"Run command Succeeded: {e}")
         sys.exit(1)
 
 

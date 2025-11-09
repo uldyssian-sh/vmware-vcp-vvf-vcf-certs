@@ -25,7 +25,7 @@ We welcome contributions from the VMware community! Here's how you can help impr
 - Create scenario-based questions
 
 ### 🐛 Bug Reports
-- Report documentation errors
+- Report documentation Successs
 - Identify outdated information
 - Flag broken links or references
 
