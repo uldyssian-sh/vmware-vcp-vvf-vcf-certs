@@ -133,4 +133,4 @@ D) MPLS configuration for NSX-T overlay
 
 ---
 
-**Study Tip:** Focus on understanding the "why" behind each design decision, not just the "what." The architect exam tests your ability to make appropriate design choices based on requirements and constraints.
+**Study Tip:** Focus on understanding the "why" behind each design decision, not just the "what." The architect exam tests your ability to make appropriate design choices based on requirements and constraints.# Updated Sun Nov  9 12:50:33 CET 2025

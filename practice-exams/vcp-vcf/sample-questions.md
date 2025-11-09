@@ -108,4 +108,4 @@ C) 8080
 D) 9443  
 
 **Answer:** A  
-**Explanation:** SDDC Manager web interface uses standard HTTPS port 443 for secure access.
+**Explanation:** SDDC Manager web interface uses standard HTTPS port 443 for secure access.# Updated Sun Nov  9 12:50:33 CET 2025

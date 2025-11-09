@@ -96,4 +96,4 @@ Learn the complete VCF deployment process from planning to validation.
 - [ ] Documentation completed
 
 ## Next Steps
-Proceed to [Lab 2: Workload Domain Creation](../lab2-workload-domains/)
+Proceed to [Lab 2: Workload Domain Creation](../lab2-workload-domains/)# Updated Sun Nov  9 12:50:33 CET 2025
