@@ -1,18 +1,5 @@
 # 2025 VMware Cloud Foundation Certification Paths
 
-[![License](https://img.shields.io/github/license/uldyssian-sh/vmware-vcp-vvf-vcf-certs?style=flat-square)](LICENSE)
-[![Status](https://img.shields.io/badge/status-active-brightgreen?style=flat-square)](#)
-[![Languages](https://img.shields.io/github/languages/count/uldyssian-sh/vmware-vcp-vvf-vcf-certs?style=flat-square)](#)
-[![Size](https://img.shields.io/github/repo-size/uldyssian-sh/vmware-vcp-vvf-vcf-certs?style=flat-square)](#)
-[![Security Scan](https://img.shields.io/badge/security-scanned-green?style=flat-square)](#)
-[![License](https://img.shields.io/github/license/uldyssian-sh/vmware-vcp-vvf-vcf-certs?style=flat-square)](LICENSE)
-[![Status](https://img.shields.io/badge/status-active-brightgreen?style=flat-square)](#)
-[![Languages](https://img.shields.io/github/languages/count/uldyssian-sh/vmware-vcp-vvf-vcf-certs?style=flat-square)](#)
-[![Size](https://img.shields.io/github/repo-size/uldyssian-sh/vmware-vcp-vvf-vcf-certs?style=flat-square)](#)
-[![Security Scan](https://img.shields.io/badge/security-scanned-green?style=flat-square)](#)
-
-[![Broadcom](https://img.shields.io/badge/Broadcom-VMware-red.svg)](https://www.broadcom.com/products/vmware)
-
 ## 📋 Overview
 
 Complete certification guide for **2025 VMware Cloud Foundation (VCF) Certification Paths** - your streamlined path to private cloud expertise. This repository contains study materials, practice exams, and hands-on labs for all **5 VCP-VCF certifications**.
