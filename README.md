@@ -49,31 +49,31 @@ Complete certification guide for **2025 VMware Cloud Foundation (VCF) Certificat
 
 ## 📚 Study Materials by Track
 
-### [VCP-VCF Architect](docs/architect/)
+### [VCP-VCF Architect](docs/architect/README.md)
 - Solution Architecture and Design
 - AMPRS Design Principles
 - Business Requirements Analysis
 - Risk Assessment and Documentation
 
-### [VCP-VCF Administrator](docs/administrator/)
+### [VCP-VCF Administrator](docs/administrator/README.md)
 - VCF Installation and Configuration
 - Build, Manage, and Secure Operations
 - Automation and Operations
 - Performance Optimization
 
-### [VCP-VVF Administrator](docs/vvf-administrator/)
+### [VCP-VVF Administrator](docs/vvf-administrator/README.md)
 - vSphere Foundation Fundamentals
 - Build, Manage and Operate
 - Performance Tuning
 - Component Management
 
-### [VCP-VCF Support](docs/vcf-support/)
+### [VCP-VCF Support](docs/vcf-support/README.md)
 - Diagnostics and Troubleshooting
 - Issue Resolution Procedures
 - Troubleshooting Tools and Processes
 - Root Cause Analysis
 
-### [VCP-VVF Support](docs/vvf-support/)
+### [VCP-VVF Support](docs/vvf-support/README.md)
 - vSphere Foundation Troubleshooting
 - Issue Resolution Techniques
 - Diagnostic Tools and Methods
