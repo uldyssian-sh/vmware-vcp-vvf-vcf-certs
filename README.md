@@ -159,4 +159,7 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file.
 *When innovation happens at the speed of light, it's hard to keep up. Broadcom's VMware Cloud Foundation certifications help IT professionals stay competitive and aligned with evolving private cloud infrastructure trends.*
 
 **[EXPLORE CERTIFICATIONS →](https://www.broadcom.com/support/education)**
-⭐ Star this repository if you find it helpful!
+
+---
+
+Maintained by: uldyssian-sh⭐ Star this repository if you find it helpful!Disclaimer: Use of this code is at your own risk. Author bears no responsibility for any damages caused by the code.
